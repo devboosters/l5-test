@@ -19,12 +19,12 @@
   </div>
   <button type="submit" class="btn btn-default">{{trans('product.submit_button')}}</button>
 </form>
-<table class="table"> <caption>Optional table caption.</caption> 
+<table class="table"> <caption>Products</caption> 
 <thead> 
 <tr>   
-  <th>{trans('product.attrs.name')}}</th> 
-  <th>{trans('product.attrs.quantity')}}</th> 
-  <th>{trans('product.attrs.price')}}</th> 
+  <th>{{trans('product.attrs.name')}}</th> 
+  <th>{{trans('product.attrs.quantity')}}</th> 
+  <th>{{trans('product.attrs.price')}}</th> 
   </tr>
    </thead>
     <tbody> 
@@ -34,6 +34,7 @@
         <td>{{$product['quantity']}}</td>
         <td>{{$product['price']}}</td>
       </tr>
+      @endforeach
     </tbody> 
     </table>
 @endsection
